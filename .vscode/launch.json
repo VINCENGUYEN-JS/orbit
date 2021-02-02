@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "compounds": [
+      {
+        "name": "Lauch whole app",
+        "configurations": ["LauchServer", "Lauch React-app"]
+      }
+    ],
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "LauchServer",
+        "runtimeExecutable": "nodemon",
+        "program": "${workspaceFolder}/orbit-api/server.js",
+        "restart": true,
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Lauch React-app",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/orbit-app/src/index.js"
+      }
+    ]
+  }
